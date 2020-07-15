@@ -9,20 +9,23 @@ public class A022 {
 		int num1 = 0;
 		int num2 = 0;
 		int sum = 0;
-		int m = 0;
+		int m = 1;
 		boolean end = true;
 		
 		do {
-			
-			sum+=num1;
-			if(sum >= 100) {
+			sum+=num2;
+			if (sum>=100) {
 				end = false;
-				System.out.println(num1);
+			}else {
+				num1++;
+				num2 = m*num1;
+				m = -m;
+				System.out.println(num2);
 			}
 		}while(end);
-		
-		
-		
+		System.out.println();
+		System.out.println("합계 : "+sum);
+		System.out.println("마지막 합계 값 : "+num2);
 
 	}
 
